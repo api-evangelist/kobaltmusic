@@ -1,20 +1,43 @@
 aid: kobaltmusic
-name: kobaltmusic
-description: kobaltmusic is a company surfaced as a portfolio company of balderton-capital and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kobaltmusic.png
+name: Kobalt Music
+description: Kobalt Music Group is a music services company providing publishing administration,
+  neighbouring rights and recordings services for songwriters, artists, publishers and rights holders.
+  It collects, matches and accounts for royalties across streaming and digital platforms, reporting to
+  clients through its own portals rather than a public developer program. Kobalt's rights and content
+  management platform is operated by KTech, its technology arm, which processes the micro-transaction
+  royalty data behind Kobalt Music Publishing and AMRA, the global digital collection society. As of
+  the July 2026 enrichment pass Kobalt publishes no public API, API documentation, or machine-readable
+  API specification; the only public machine-readable surface found was an RFC 9116 security.txt.
 url: https://raw.githubusercontent.com/api-evangelist/kobaltmusic/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - balderton-capital
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: no-public-api
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Music
+- Music Publishing
+- Royalties
+- Rights Management
+- Media
+- Entertainment
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,3 +47,20 @@ maintainers:
 common:
 - type: Website
   url: https://www.kobaltmusic.com/
+- type: WellKnown
+  url: well-known/kobaltmusic-well-known.yml
+- type: SecurityTxt
+  url: well-known/kobaltmusic-security.txt
+- type: Security
+  url: https://www.kobaltmusic.com/.well-known/security.txt
+- type: VulnerabilityDisclosure
+  url: security/kobaltmusic-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/kobaltmusic-domain-security.yml
+- type: LLMsTxt
+  url: llms/kobaltmusic-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
