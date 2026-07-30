@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of https://www.kobaltmusic.com/.well-known/
+host: https://www.kobaltmusic.com
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  file: kobaltmusic-security.txt
+  standard: RFC 9116
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /llms.txt
+  status: 404
+notes: |
+  www.kobaltmusic.com sits behind Cloudflare and returns 403 to non-browser clients for
+  HTML paths; the /.well-known/ surface is served without that challenge, so the
+  security.txt above is a verbatim 200 capture. The published security.txt carries an
+  Expires value of 2025-05-01 and is therefore stale per RFC 9116 section 2.5.4, and its
+  Contact points at KTech (security@ktech.com), Kobalt's technology arm.
+  DNS probe of candidate developer hosts: api., developer., docs., status., blog. and
+  careers.kobaltmusic.com all NXDOMAIN. Only www., portal. and app.kobaltmusic.com
+  resolve (all Cloudflare), which are client/artist-facing surfaces, not a developer
+  program. No public API, OpenAPI, or developer documentation was found.
